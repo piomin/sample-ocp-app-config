@@ -6,6 +6,7 @@ metadata:
     app: sample-ocp-app
     app.kubernetes.io/component: sample-ocp-app
     app.kubernetes.io/instance: sample-ocp-app
+    backstage.io/kubernetes-id: sample-ocp-app
   annotations:
     openshift.io/host.generated: 'true'
 spec:
