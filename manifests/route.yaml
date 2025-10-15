@@ -1,0 +1,18 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: sample-ocp-app
+  labels:
+    app: sample-ocp-app
+    app.kubernetes.io/component: sample-ocp-app
+    app.kubernetes.io/instance: sample-ocp-app
+  annotations:
+    openshift.io/host.generated: 'true'
+spec:
+  to:
+    kind: Service
+    name: sample-ocp-app
+    weight: 100
+  port:
+    targetPort: http
+  wildcardPolicy: None
